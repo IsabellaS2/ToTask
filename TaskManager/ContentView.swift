@@ -16,12 +16,22 @@ struct ContentView: View {
         return formatter
     }()
     
-    // Catrgory Picker
+    // Category Picker
     @State private var selection1: String? = nil
     
     // Mark Complete Button
     @State private var isTaskComplete: Bool = false
-
+    
+    // Title input
+    @State private var taskTitle: String = ""
+    @State private var taskDescription: String = ""
+    
+//    @State private var selectedItem: String = "School"
+//    let dropdownOptions = ["School","Work","Personal","Fitness"]
+    
+    @State private var selectedCategory: String = "School"
+    let dropdownOptions = ["School", "Work", "Personal", "Fitness"]
+    
     var body: some View {
         ScrollView {
             ZStack {
@@ -38,13 +48,14 @@ struct ContentView: View {
                     }
                     
                     VStack(alignment: .leading) {
-                        Text("Current Task Name")
+                        TextField("Task Name", text: $taskTitle)
                             .font(.custom("NotoSansOriya", size: Spacing.large))
                             .foregroundColor(Color("DarkPurple"))
                         
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ")
+                        TextField("Task Description", text: $taskDescription)
                             .font(.custom("NotoSansOriya", size: Spacing.spacious))
                             .foregroundColor(Color("DarkPurple"))
+
                     }
                     .padding(Spacing.spacious)
                     
@@ -61,15 +72,27 @@ struct ContentView: View {
                                 .font(.custom("NotoSansOriya", size: Spacing.considerable))
 
                             Spacer()
-                            DropDownPicker(
-                                selection: $selection1,
-                                options: [
-                                    "School",
-                                    "Work",
-                                    "Personal",
-                                    "Fitness",
-                                ]
-                            )
+                            
+                            VStack {
+                                Picker("Select a category", selection: $selectedCategory) {
+                                    ForEach(dropdownOptions, id: \.self) { dropdownOption in
+                                        Text(dropdownOption)
+                                    }
+                                }
+                                
+                            }
+                            
+//                            DropDownPicker(
+//                                selection: $selection1,
+//                                options: [
+//                                    "School",
+//                                    "Work",
+//                                    "Personal",
+//                                    "Fitness",
+//                                ]
+//                            )
+                            
+                            
                         }
                         
                         HStack {

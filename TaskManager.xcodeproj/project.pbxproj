@@ -15,7 +15,6 @@
 		EED772172B7BC0C8007BDA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED772162B7BC0C8007BDA4A /* Assets.xcassets */; };
 		EED7721A2B7BC0C8007BDA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */; };
 		EEF84FFD2B84CEC10055551C /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEF84FE62B84CEC10055551C /* Jost-VariableFont_wght.ttf */; };
-		EEF850112B84CEC10055551C /* Jost-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEF84FFB2B84CEC10055551C /* Jost-Italic-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		EED772162B7BC0C8007BDA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EEF84FE62B84CEC10055551C /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		EEF84FFB2B84CEC10055551C /* Jost-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				EEF84FE62B84CEC10055551C /* Jost-VariableFont_wght.ttf */,
-				EEF84FFB2B84CEC10055551C /* Jost-Italic-VariableFont_wght.ttf */,
 			);
 			path = Jost;
 			sourceTree = "<group>";
@@ -149,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EED7721A2B7BC0C8007BDA4A /* Preview Assets.xcassets in Resources */,
-				EEF850112B84CEC10055551C /* Jost-Italic-VariableFont_wght.ttf in Resources */,
 				EED772172B7BC0C8007BDA4A /* Assets.xcassets in Resources */,
 				EEF84FFD2B84CEC10055551C /* Jost-VariableFont_wght.ttf in Resources */,
 			);
