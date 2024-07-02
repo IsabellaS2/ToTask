@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE4BB9C52B88F24C00FFF4F2 /* DropDownCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BB9C42B88F24C00FFF4F2 /* DropDownCategoryPicker.swift */; };
 		EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */; };
+		EE59B6B12C340D90003D59DF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */; };
 		EE996DF12B88E1EE0036470C /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE996DF02B88E1EE0036470C /* Spacing.swift */; };
 		EED772132B7BC0C6007BDA4A /* TaskManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */; };
 		EED772152B7BC0C6007BDA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED772142B7BC0C6007BDA4A /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		EE4BB9C42B88F24C00FFF4F2 /* DropDownCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownCategoryPicker.swift; sourceTree = "<group>"; };
 		EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		EE59B6B02C340D90003D59DF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EE996DF02B88E1EE0036470C /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		EED7720F2B7BC0C6007BDA4A /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */,
 				EED772142B7BC0C6007BDA4A /* ContentView.swift */,
+				EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */,
 				EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */,
 				EE4BB9C42B88F24C00FFF4F2 /* DropDownCategoryPicker.swift */,
 				EE996DF02B88E1EE0036470C /* Spacing.swift */,
@@ -163,6 +166,7 @@
 				EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */,
 				EED772132B7BC0C6007BDA4A /* TaskManagerApp.swift in Sources */,
 				EE996DF12B88E1EE0036470C /* Spacing.swift in Sources */,
+				EE59B6B12C340D90003D59DF /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +372,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE59B6B02C340D90003D59DF /* Model.xcdatamodel */,
+			);
+			currentVersion = EE59B6B02C340D90003D59DF /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = /Users/isabellasulisufi/Desktop/TaskManager/TaskManager/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EED772072B7BC0C6007BDA4A /* Project object */;
 }

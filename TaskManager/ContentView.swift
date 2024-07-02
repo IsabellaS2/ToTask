@@ -1,4 +1,3 @@
-//ReportCorrectionsEmptyViewDelegate
 //  ContentView.swift
 //  TaskManager
 //
@@ -6,35 +5,29 @@
 
 import SwiftUI
 
+struct Task {
+    var title: String
+    var description: String
+    var dueDate: Date
+    var category: String
+    var isComplete: Bool
+}
+
 struct ContentView: View {
+    @State private var tasks: [Task] = []
     
-    // Date Picker
     @State private var selectedDate: Date = Date()
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium // Set date to readable format
-        return formatter
-    }()
-    
-    // Category Picker
-    @State private var selection1: String? = nil
-    
-    // Mark Complete Button
+    @State private var selectedCategory: String = "School"
     @State private var isTaskComplete: Bool = false
-    
-    // Title input
     @State private var taskTitle: String = ""
     @State private var taskDescription: String = ""
     
-//    @State private var selectedItem: String = "School"
-//    let dropdownOptions = ["School","Work","Personal","Fitness"]
+    var dropdownOptions = ["School", "Work", "Personal", "Fitness"]
     
-    @State private var selectedCategory: String = "School"
-    let dropdownOptions = ["School", "Work", "Personal", "Fitness"]
     
     var body: some View {
-        ScrollView {
-            ZStack {
+
+            NavigationView {
                 VStack {
                     HStack {
                         Image(systemName: "arrow.left")
@@ -46,6 +39,7 @@ struct ContentView: View {
                             .scaledToFit()
                             .frame(width: 200, height: 100)
                     }
+                    .padding(.top)
                     
                     VStack(alignment: .leading) {
                         TextField("Task Name", text: $taskTitle)
@@ -55,44 +49,28 @@ struct ContentView: View {
                         TextField("Task Description", text: $taskDescription)
                             .font(.custom("NotoSansOriya", size: Spacing.spacious))
                             .foregroundColor(Color("DarkPurple"))
-
                     }
                     .padding(Spacing.spacious)
                     
                     VStack(alignment: .center, spacing: 30) {
-                        DatePicker("Due Date",
-                                   selection: $selectedDate,
-                                   displayedComponents: .date)
+                        DatePicker("Due Date", selection: $selectedDate, displayedComponents: .date)
                             .foregroundColor(Color("DarkPurple"))
                             .font(.custom("NotoSansOriya", size: Spacing.considerable))
                         
+                        
                         HStack {
-                            Text("Category")
+                            Section(header: Text("Category")
                                 .foregroundColor(Color("DarkPurple"))
-                                .font(.custom("NotoSansOriya", size: Spacing.considerable))
-
-                            Spacer()
-                            
-                            VStack {
-                                Picker("Select a category", selection: $selectedCategory) {
-                                    ForEach(dropdownOptions, id: \.self) { dropdownOption in
-                                        Text(dropdownOption)
+                                .font(.custom("NotoSansOriya", size: Spacing.considerable))) {
+                                    
+                                    Spacer()
+                                    Picker("Select a category", selection: $selectedCategory) {
+                                        ForEach(dropdownOptions, id: \.self) { dropdownOption in
+                                            Text(dropdownOption)
+                                        }
                                     }
+                                    .pickerStyle(MenuPickerStyle())
                                 }
-                                
-                            }
-                            
-//                            DropDownPicker(
-//                                selection: $selection1,
-//                                options: [
-//                                    "School",
-//                                    "Work",
-//                                    "Personal",
-//                                    "Fitness",
-//                                ]
-//                            )
-                            
-                            
                         }
                         
                         HStack {
@@ -104,17 +82,24 @@ struct ContentView: View {
                                     .frame(width: Spacing.large, height: Spacing.large)
                                     .foregroundColor(isTaskComplete ? Color.cPink : Color.cPink)
                             }
-
+                            
                             Text("Mark As Complete?")
                                 .foregroundColor(Color("DarkPurple"))
                                 .font(Font.custom("NotoSansOriya", size: Spacing.medium))
-                                .baselineOffset(-3) // Adjust the baseline offset as needed
+                                .baselineOffset(-3)
                             Spacer()
                         }
                         
                         Button(action: {
-                            // Add your action here
-                            // This closure is executed when the button is tapped
+                            let newTask = Task(
+                                title: taskTitle,
+                                description: taskDescription,
+                                dueDate: selectedDate,
+                                category: selectedCategory,
+                                isComplete: isTaskComplete
+                            )
+                            tasks.append(newTask)
+                            print(tasks)
                         }) {
                             Text("Save Changes")
                                 .font(Font.custom("NotoSansOriya", size: Spacing.medium))
@@ -125,6 +110,10 @@ struct ContentView: View {
                         }
                         
                         Button(action: {
+                            tasks.removeAll()
+                            print(tasks)
+
+                            
                             // Add your action here
                             // This closure is executed when the button is tapped
                         }) {
@@ -141,14 +130,13 @@ struct ContentView: View {
                             .background(Color("DarkestPurple"))
                             .cornerRadius(Spacing.medium)
                         }
+                        Spacer()
                     }
                     .padding(.horizontal, Spacing.spacious)
                 }
             }
         }
-        .background(Color.rose.ignoresSafeArea())
     }
-}
 
 
 #Preview {
