@@ -8,16 +8,40 @@
 import SwiftUI
 
 struct TextStyles {
-    static var title: Text {
-        return Text("")
-            .font(.custom("NotoSansOriya", size: Spacing.large))
-            .foregroundColor(Color("DarkPurple"))
-            // Add more styling as needed
+    // Style for Titles
+    static func titleStyle() -> some ViewModifier {
+        return TextStyleModifier(font: .custom("Gill Sans", size: Spacing.large),
+                                color: Color("DarkPurple"),
+                                applyPadding: false)
     }
 
-    static var description: Text {
-        return Text("")
-            .font(.custom("NotoSansOriya", size: Spacing.spacious))
-            .foregroundColor(Color("DarkPurple"))
+    // Style for Descriptions
+    static func descriptionStyle() -> some ViewModifier {
+        return TextStyleModifier(font: .custom("Gill Sans", size: Spacing.spacious),
+                                color: Color("DarkPurple"),
+                                applyPadding: false)
+    }
+    
+    // Style for Bullet Points
+    static func bulletPointStyle() -> some ViewModifier {
+        return TextStyleModifier(font: .custom("Gill Sans", size: Spacing.considerable),
+                                color: Color("DarkPurple"),
+                                applyPadding: true)
+    }
+
+    private struct TextStyleModifier: ViewModifier {
+        let font: Font
+        let color: Color
+        let applyPadding: Bool
+
+        func body(content: Content) -> some View {
+            content
+                .font(font)
+                .foregroundColor(color)
+                .padding(.bottom, applyPadding ? 4.0 : 0)
+        }
     }
 }
+
+
+

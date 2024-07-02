@@ -10,25 +10,25 @@
 		EE4BB9C52B88F24C00FFF4F2 /* DropDownCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BB9C42B88F24C00FFF4F2 /* DropDownCategoryPicker.swift */; };
 		EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */; };
 		EE59B6B12C340D90003D59DF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */; };
+		EE59B6B42C342680003D59DF /* AboutPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59B6B32C342680003D59DF /* AboutPageView.swift */; };
 		EE996DF12B88E1EE0036470C /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE996DF02B88E1EE0036470C /* Spacing.swift */; };
 		EED772132B7BC0C6007BDA4A /* TaskManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */; };
 		EED772152B7BC0C6007BDA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED772142B7BC0C6007BDA4A /* ContentView.swift */; };
 		EED772172B7BC0C8007BDA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED772162B7BC0C8007BDA4A /* Assets.xcassets */; };
 		EED7721A2B7BC0C8007BDA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */; };
-		EEF84FFD2B84CEC10055551C /* Jost-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEF84FE62B84CEC10055551C /* Jost-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE4BB9C42B88F24C00FFF4F2 /* DropDownCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownCategoryPicker.swift; sourceTree = "<group>"; };
 		EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		EE59B6B02C340D90003D59DF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		EE59B6B32C342680003D59DF /* AboutPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageView.swift; sourceTree = "<group>"; };
 		EE996DF02B88E1EE0036470C /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		EED7720F2B7BC0C6007BDA4A /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerApp.swift; sourceTree = "<group>"; };
 		EED772142B7BC0C6007BDA4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EED772162B7BC0C8007BDA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EEF84FE62B84CEC10055551C /* Jost-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +62,13 @@
 			isa = PBXGroup;
 			children = (
 				EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */,
+				EE59B6B32C342680003D59DF /* AboutPageView.swift */,
 				EED772142B7BC0C6007BDA4A /* ContentView.swift */,
 				EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */,
 				EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */,
 				EE4BB9C42B88F24C00FFF4F2 /* DropDownCategoryPicker.swift */,
 				EE996DF02B88E1EE0036470C /* Spacing.swift */,
 				EED772162B7BC0C8007BDA4A /* Assets.xcassets */,
-				EEF84FE52B84CEC10055551C /* Jost */,
 				EED772182B7BC0C8007BDA4A /* Preview Content */,
 			);
 			path = TaskManager;
@@ -80,14 +80,6 @@
 				EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		EEF84FE52B84CEC10055551C /* Jost */ = {
-			isa = PBXGroup;
-			children = (
-				EEF84FE62B84CEC10055551C /* Jost-VariableFont_wght.ttf */,
-			);
-			path = Jost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +142,6 @@
 			files = (
 				EED7721A2B7BC0C8007BDA4A /* Preview Assets.xcassets in Resources */,
 				EED772172B7BC0C8007BDA4A /* Assets.xcassets in Resources */,
-				EEF84FFD2B84CEC10055551C /* Jost-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE59B6B42C342680003D59DF /* AboutPageView.swift in Sources */,
 				EE4BB9C52B88F24C00FFF4F2 /* DropDownCategoryPicker.swift in Sources */,
 				EED772152B7BC0C6007BDA4A /* ContentView.swift in Sources */,
 				EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */,
