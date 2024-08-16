@@ -29,7 +29,7 @@ struct TextStyles {
                                 applyPadding: true)
     }
 
-    private struct TextStyleModifier: ViewModifier {
+    struct TextStyleModifier: ViewModifier {
         let font: Font
         let color: Color
         let applyPadding: Bool
@@ -42,6 +42,5 @@ struct TextStyles {
         }
     }
 }
-
 
 
