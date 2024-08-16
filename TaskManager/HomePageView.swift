@@ -5,30 +5,15 @@
 
 import SwiftUI
 
-struct Task {
-    var title: String
-    var description: String
-    var dueDate: Date
-    var category: String
-    var isComplete: Bool
-}
-
-struct ContentView: View {
-    @State private var taskList: [Task] = []
-    
-    @State private var selectedDate: Date = Date()
-    @State private var selectedCategory: String = "School"
-    @State private var isTaskComplete: Bool = false
-    @State private var taskTitle: String = ""
-    @State private var taskDescription: String = ""
-    
-    var dropdownOptions = ["School", "Work", "Personal", "Fitness"]
-    
+struct HomePageView: View {
+    @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
         
         NavigationView {
             VStack {
+                
+                //Image and back arrow
                 HStack {
                     Image(systemName: "arrow.left")
                         .font(.system(size: Spacing.big, weight: .bold))
@@ -41,19 +26,23 @@ struct ContentView: View {
                 }
                 .padding(.top)
                 
+                
+                //Entered text section
                 VStack(alignment: .leading) {
-                    TextField("Current Task Name", text: $taskTitle)
+                    TextField("Current Task Name", text: $viewModel.taskTitle)
                         .font(.custom("NotoSansOriya", size: Spacing.large))
                         .foregroundColor(Color("DarkPurple"))
                     
-                    TextField("Task Description", text: $taskDescription)
+                    TextField("Task Description", text: $viewModel.taskDescription)
                         .font(.custom("NotoSansOriya", size: Spacing.spacious))
                         .foregroundColor(Color("DarkPurple"))
                 }
                 .padding(Spacing.spacious)
                 
+                
+                //Due date and category
                 VStack(alignment: .center, spacing: 30) {
-                    DatePicker("Due Date", selection: $selectedDate, displayedComponents: .date)
+                    DatePicker("Due Date", selection: $viewModel.selectedDate, displayedComponents: .date)
                         .foregroundColor(Color("DarkPurple"))
                         .font(.custom("NotoSansOriya", size: Spacing.considerable))
                     
@@ -64,8 +53,8 @@ struct ContentView: View {
                             .font(.custom("NotoSansOriya", size: Spacing.considerable))) {
                                 
                                 Spacer()
-                                Picker("Select a category", selection: $selectedCategory) {
-                                    ForEach(dropdownOptions, id: \.self) { dropdownOption in
+                                Picker("Select a category", selection: $viewModel.selectedCategory) {
+                                    ForEach(viewModel.dropdownOptions, id: \.self) { dropdownOption in
                                         Text(dropdownOption)
                                     }
                                 }
@@ -73,14 +62,15 @@ struct ContentView: View {
                             }
                     }
                     
+                    //Buttons
                     HStack {
                         Button(action: {
-                            isTaskComplete.toggle()
+                            viewModel.handleButtonToggle()
                         }) {
-                            Image(systemName: isTaskComplete ? "checkmark.circle.fill" : "circle")
+                            Image(systemName: viewModel.isTaskComplete ? "checkmark.circle.fill" : "circle")
                                 .resizable()
                                 .frame(width: Spacing.large, height: Spacing.large)
-                                .foregroundColor(isTaskComplete ? Color.cPink : Color.cPink)
+                                .foregroundColor(viewModel.isTaskComplete ? Color.cPink : Color.cPink)
                         }
                         
                         Text("Mark As Complete?")
@@ -92,15 +82,8 @@ struct ContentView: View {
                     
                     //Save Changes Button
                     Button(action: {
-                        let newTask = Task(
-                            title: taskTitle,
-                            description: taskDescription,
-                            dueDate: selectedDate,
-                            category: selectedCategory,
-                            isComplete: isTaskComplete
-                        )
-                        taskList.append(newTask)
-                        print(taskList)
+                        viewModel.addToTaskListArray()
+                        
                     }) {
                         Text("Save Changes")
                             .font(Font.custom("NotoSansOriya", size: Spacing.medium))
@@ -113,9 +96,7 @@ struct ContentView: View {
                     
                     // Delete Button
                     Button(action: {
-                        taskList.removeAll()
-                        print(taskList)
-                        
+                        viewModel.emptyTaskListArray()
                     }) {
                         HStack(alignment: .center) {
                             Image(systemName: "delete.left")
@@ -141,5 +122,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    HomePageView()
 }
