@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class HomeViewModel: ObservableObject {
+class TaskViewModel: ObservableObject {
     
     struct Task {
         var title: String
@@ -49,3 +49,6 @@ class HomeViewModel: ObservableObject {
         
     }
 }
+
+//check if tasks array is empty
+//if it is then
