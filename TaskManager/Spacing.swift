@@ -32,6 +32,4 @@ struct Spacing {
     static let big: CGFloat = 36
     
     static let huge: CGFloat = 40
-    
-//    static let super: CGFloat = 50
 }

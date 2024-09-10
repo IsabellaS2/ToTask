@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AboutPageView: View {
     var body: some View {
-        NavigationView {
+         
             VStack {
                 HStack {
                     Image("LogoImage")
@@ -49,19 +49,21 @@ struct AboutPageView: View {
                 
                 Text("Start Today and Add A Task!")
                     .multilineTextAlignment(.center)
-
+                
                     .modifier(TextStyles.descriptionStyle())
                 
                 
                 Spacer()
                 
                 HStack{
+                    
+                    
                     // View All Tasks Button
-                    Button(action: {
-                        //add action here
+                    
+                    NavigationLink {
+                        AddTaskView()
                         
-                        
-                    }) {
+                    } label: {
                         Text("View All Tasks")
                             .font(Font.custom("NotoSansOriya", size: Spacing.medium))
                             .foregroundColor(Color.cPink)
@@ -69,31 +71,38 @@ struct AboutPageView: View {
                             .background(Color("DarkestPurple"))
                             .cornerRadius(Spacing.medium)
                     }
+                    
+                    
                     Spacer()
                     
                     
                     //Add Task Button
-                    Button(action: {
-                        //add action here
-                    }) {
-                        HStack(alignment: .center) {
-                            Image(systemName: "plus.circle")
-                                .font(.system(size: Spacing.large, weight: .bold))
-                                .foregroundColor(Color("DarkestPurple"))
-                            Text("Add Task")
-                                .font(Font.custom("NotoSansOriya", size: Spacing.medium))
-                                .foregroundColor(Color("DarkestPurple"))
-                                .baselineOffset(-5) // Adjust the baseline offset as needed
-                        }
-                        .padding(12.0)
-                        .background(Color.cPink)
-                        .cornerRadius(Spacing.medium)
+                    NavigationLink {
+                        AddTaskView()
+                        
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: Spacing.large, weight: .bold))
+                            .foregroundColor(Color("DarkestPurple"))
+                        Text("Add Task")
+                            .font(Font.custom("NotoSansOriya", size: Spacing.medium))
+                            .foregroundColor(Color("DarkestPurple"))
+                            .baselineOffset(-5)
                     }
+                    .padding(12.0)
+                    .background(Color.cPink)
+                    .cornerRadius(Spacing.medium)
+                    
                 }
+                
+                
+                
             }
             .padding(Spacing.spacious)
             .background(Color("Rose"))
-        }
+            
+            
+        
     }
 }
 
