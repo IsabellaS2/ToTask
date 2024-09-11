@@ -25,6 +25,7 @@ class TaskViewModel: ObservableObject {
     @Published var taskTitle: String = ""
     @Published var taskDescription: String = ""
     
+    
     var dropdownOptions = ["School", "Work", "Personal", "Fitness"]
     
     func emptyTaskListArray() {
@@ -50,5 +51,9 @@ class TaskViewModel: ObservableObject {
     }
 }
 
+
+//@Published var message: String = ""
+
 //check if tasks array is empty
 //if it is then
+//message =
