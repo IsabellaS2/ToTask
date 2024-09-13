@@ -26,6 +26,7 @@ struct MainView: View {
                     Label("Help", systemImage: "questionmark")
                 }
         }
+        
         //accent color is depreciated, what else can i use?
     }
 }
@@ -34,3 +35,8 @@ struct MainView: View {
 #Preview {
     MainView()
 }
+
+
+//create model
+//add list of tasks to vm
+//with list, display tasks on home page - how to display tasks
