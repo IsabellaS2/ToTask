@@ -9,13 +9,6 @@ import SwiftUI
 
 class TaskViewModel: ObservableObject {
     
-    struct Task {
-        var title: String
-        var description: String
-        var dueDate: Date
-        var category: String
-        var isComplete: Bool
-    }
     
     @Published var taskList: [Task] = []
     

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EE00D2BC2C6F8D65004FF048 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00D2BB2C6F8D65004FF048 /* TaskViewModel.swift */; };
+		EE019E182C9460C600A8B764 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE019E172C9460C600A8B764 /* TaskModel.swift */; };
 		EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */; };
-		EE59B6B12C340D90003D59DF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */; };
 		EE59B6B42C342680003D59DF /* AboutPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59B6B32C342680003D59DF /* AboutPageView.swift */; };
 		EE996DF12B88E1EE0036470C /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE996DF02B88E1EE0036470C /* Spacing.swift */; };
 		EEA7106C2C90808600785086 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA7106B2C90808600785086 /* MainView.swift */; };
@@ -22,8 +22,8 @@
 
 /* Begin PBXFileReference section */
 		EE00D2BB2C6F8D65004FF048 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		EE019E172C9460C600A8B764 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
-		EE59B6B02C340D90003D59DF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EE59B6B32C342680003D59DF /* AboutPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageView.swift; sourceTree = "<group>"; };
 		EE996DF02B88E1EE0036470C /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		EEA7106B2C90808600785086 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -46,6 +46,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE019E152C94604D00A8B764 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEA7106B2C90808600785086 /* MainView.swift */,
+				EE59B6B32C342680003D59DF /* AboutPageView.swift */,
+				EED772142B7BC0C6007BDA4A /* AddTaskView.swift */,
+				EEA7106D2C908CA000785086 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE019E162C9460A500A8B764 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE019E172C9460C600A8B764 /* TaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE019E192C9460D000A8B764 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE00D2BB2C6F8D65004FF048 /* TaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EED772062B7BC0C6007BDA4A = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +92,11 @@
 		EED772112B7BC0C6007BDA4A /* TaskManager */ = {
 			isa = PBXGroup;
 			children = (
-				EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */,
-				EE59B6B32C342680003D59DF /* AboutPageView.swift */,
-				EEA7106B2C90808600785086 /* MainView.swift */,
-				EEA7106D2C908CA000785086 /* HomeView.swift */,
-				EED772142B7BC0C6007BDA4A /* AddTaskView.swift */,
-				EE00D2BB2C6F8D65004FF048 /* TaskViewModel.swift */,
-				EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */,
+				EE019E162C9460A500A8B764 /* Model */,
+				EE019E152C94604D00A8B764 /* Views */,
+				EE019E192C9460D000A8B764 /* ViewModel */,
 				EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */,
+				EED772122B7BC0C6007BDA4A /* TaskManagerApp.swift */,
 				EE996DF02B88E1EE0036470C /* Spacing.swift */,
 				EED772162B7BC0C8007BDA4A /* Assets.xcassets */,
 				EED772182B7BC0C8007BDA4A /* Preview Content */,
@@ -161,12 +185,12 @@
 				EEA7106E2C908CA000785086 /* HomeView.swift in Sources */,
 				EE59B6B42C342680003D59DF /* AboutPageView.swift in Sources */,
 				EE00D2BC2C6F8D65004FF048 /* TaskViewModel.swift in Sources */,
+				EE019E182C9460C600A8B764 /* TaskModel.swift in Sources */,
 				EED772152B7BC0C6007BDA4A /* AddTaskView.swift in Sources */,
 				EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */,
 				EED772132B7BC0C6007BDA4A /* TaskManagerApp.swift in Sources */,
 				EE996DF12B88E1EE0036470C /* Spacing.swift in Sources */,
 				EEA7106C2C90808600785086 /* MainView.swift in Sources */,
-				EE59B6B12C340D90003D59DF /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,20 +396,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EE59B6AF2C340D90003D59DF /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EE59B6B02C340D90003D59DF /* Model.xcdatamodel */,
-			);
-			currentVersion = EE59B6B02C340D90003D59DF /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = /Users/isabellasulisufi/Desktop/TaskManager/TaskManager/Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EED772072B7BC0C6007BDA4A /* Project object */;
 }

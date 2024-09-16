@@ -46,22 +46,21 @@ struct AddTaskView: View {
                         .foregroundColor(Color("DarkPurple"))
                         .font(.custom("NotoSansOriya", size: Spacing.considerable))
                     
-                    
                     HStack {
-                        Section(header: Text("Category")
+                        Text("Category")
                             .foregroundColor(Color("DarkPurple"))
-                            .font(.custom("NotoSansOriya", size: Spacing.considerable))) {
-                                
-                                Spacer()
-                                Picker("Select a category", selection: $viewModel.selectedCategory) {
-                                    ForEach(viewModel.dropdownOptions, id: \.self) { dropdownOption in
-                                        Text(dropdownOption)
-                                    }
-                                }
-                                .pickerStyle(MenuPickerStyle())
-                            }
+                            .font(.custom("NotoSansOriya", size: Spacing.considerable))
+                        Spacer()
+                        
+                        Picker("Select a category", selection: $viewModel.selectedCategory) {
+                                   ForEach(viewModel.dropdownOptions, id: \.self) { dropdownOption in
+                                       Text(dropdownOption)
+                                   }
+                               }
+                        .pickerStyle(MenuPickerStyle())
                     }
                     
+                                    
                     //Buttons
                     HStack {
                         Button(action: {
