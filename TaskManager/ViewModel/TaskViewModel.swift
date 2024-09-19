@@ -13,6 +13,8 @@ class TaskViewModel: ObservableObject {
     @Published var taskList: [Task] = []
     
     @Published var selectedDate: Date = Date()
+    @Published var startDate: Date = Date()
+
     @Published var selectedCategory: String = "School"
     @Published var isTaskComplete: Bool = false
     @Published var taskTitle: String = ""
@@ -20,6 +22,17 @@ class TaskViewModel: ObservableObject {
     
     
     var dropdownOptions = ["School", "Work", "Personal", "Fitness"]
+    
+        
+    var task1 = Task(
+        title: "Science homework",
+        description: "Biology presentation on anatomy",
+        startDate: Date.now,
+        dueDate: Date.now.addingTimeInterval(86400),
+        category: "School",
+        isComplete: false
+    )
+
     
     func emptyTaskListArray() {
         taskList.removeAll()
@@ -30,6 +43,7 @@ class TaskViewModel: ObservableObject {
         let newTask = Task(
             title: taskTitle,
             description: taskDescription,
+            startDate: startDate,
             dueDate: selectedDate,
             category: selectedCategory,
             isComplete: isTaskComplete

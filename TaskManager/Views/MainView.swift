@@ -37,6 +37,3 @@ struct MainView: View {
 }
 
 
-//create model
-//add list of tasks to vm
-//with list, display tasks on home page - how to display tasks

@@ -29,6 +29,8 @@ import Foundation
 struct Task {
     var title: String
     var description: String?
+    var startDate: Date
+
     var dueDate: Date
     var category: String
     var isComplete: Bool
