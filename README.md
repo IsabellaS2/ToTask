@@ -16,6 +16,12 @@ Set Start and End Dates: Users can assign a start date and end date to each task
 
 - Swift / SwiftUI
 
+## Why did I decide to build TaskManager
+I built this project as a way to consolidate and expand upon my learning in Swift and SwiftUI, both through the [100 Days of Swift](https://www.hackingwithswift.com/100/swiftui) course and my professional experience. This project serves as a practical application of key concepts, such as the MVVM architecture, which I’ve been integrating to reinforce my understanding of software design patterns. Throughout this process, I’ve gained deeper insights into Swift’s design principles, the structure of views, and various features I hadn't yet explored. This hands-on approach has been invaluable in refining my skills and advancing my expertise in iOS development.
+
+## Challenges I faced whilst building it
+One of the key challenges I encountered while building this project was implementing persistent data storage to ensure that tasks would remain saved even after the app was closed and reopened. This required integrating Apple’s Core Data, which I found to be quite complex and difficult to grasp at first. The learning curve caused some frustration and led me to take a brief break from the project. However, I decided to focus on simpler, temporary storage methods for now, such as using arrays to store tasks, with plans to implement permanent storage at a later stage. Reflecting on this challenge, I realised that as this is a beginner project meant to build foundational skills, it's okay to postpone more advanced features and tackle them progressively as my expertise grows.
+
 
 ## Designs
 ### Create Task View
