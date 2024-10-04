@@ -15,13 +15,13 @@ class TaskViewModel: ObservableObject {
     @Published var selectedDate: Date = Date()
     @Published var startDate: Date = Date()
 
-    @Published var selectedCategory: String = "School"
+    @Published var selectedCategory: Category = .school
     @Published var isTaskComplete: Bool = false
     @Published var taskTitle: String = ""
     @Published var taskDescription: String = ""
     
     
-    var dropdownOptions = ["School", "Work", "Personal", "Fitness"]
+    var dropdownOptions = Category.allCases.map { $0.rawValue }
     
         
     var task1 = Task(
@@ -29,7 +29,7 @@ class TaskViewModel: ObservableObject {
         description: "Biology presentation on anatomy",
         startDate: Date.now,
         dueDate: Date.now.addingTimeInterval(86400),
-        category: "School",
+        category: .fitness,
         isComplete: false
     )
 
@@ -45,7 +45,7 @@ class TaskViewModel: ObservableObject {
             description: taskDescription,
             startDate: startDate,
             dueDate: selectedDate,
-            category: selectedCategory,
+            category:selectedCategory,
             isComplete: isTaskComplete
         )
         taskList.append(newTask)
