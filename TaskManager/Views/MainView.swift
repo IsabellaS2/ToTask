@@ -15,6 +15,7 @@ struct MainView: View {
                     Label("Home", systemImage: "house")
                 }
             
+            
             AddTaskView()
                 .tabItem {
                     Label("Task List", systemImage: "list.bullet")
@@ -26,8 +27,6 @@ struct MainView: View {
                     Label("Help", systemImage: "questionmark")
                 }
         }
-        
-        //accent color is depreciated, what else can i use?
     }
 }
 

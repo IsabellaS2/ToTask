@@ -45,7 +45,7 @@ struct HomeView: View {
                                 .foregroundColor(Color("DarkPurple"))
                                 .padding(.bottom, 4)
                             Spacer()
-                            Text(viewModel.task1.category)
+                            Text(viewModel.task1.category.rawValue)
                                 .font(.custom("Gill Sans", size: Spacing.small))
                                 .foregroundColor(Color("DarkPurple"))
                                 .padding(.horizontal, 16)
