@@ -11,22 +11,22 @@ struct TextStyles {
     // Style for Titles
     static func titleStyle() -> some ViewModifier {
         return TextStyleModifier(font: .custom("Gill Sans", size: Spacing.large),
-                                color: Color("DarkPurple"),
-                                applyPadding: false)
+                                 color: Color("DarkPurple"),
+                                 applyPadding: false)
     }
 
     // Style for Descriptions
     static func descriptionStyle() -> some ViewModifier {
         return TextStyleModifier(font: .custom("Gill Sans", size: Spacing.spacious),
-                                color: Color("DarkPurple"),
-                                applyPadding: false)
+                                 color: Color("DarkPurple"),
+                                 applyPadding: false)
     }
-    
+
     // Style for Bullet Points
     static func bulletPointStyle() -> some ViewModifier {
         return TextStyleModifier(font: .custom("Gill Sans", size: Spacing.considerable),
-                                color: Color("DarkPurple"),
-                                applyPadding: true)
+                                 color: Color("DarkPurple"),
+                                 applyPadding: true)
     }
 
     struct TextStyleModifier: ViewModifier {
@@ -42,5 +42,3 @@ struct TextStyles {
         }
     }
 }
-
-
