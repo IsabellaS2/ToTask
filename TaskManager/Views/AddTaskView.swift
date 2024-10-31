@@ -9,10 +9,8 @@ struct AddTaskView: View {
     @ObservedObject var viewModel: TaskViewModel
 
     var body: some View {
-
         NavigationView {
             VStack {
-
                 // Image and back arrow
                 HStack {
                     Image(systemName: "arrow.left")
@@ -62,12 +60,12 @@ struct AddTaskView: View {
                     HStack {
                         Button(action: {
                             viewModel.handleButtonToggle()
-                        }) {
+                        }, label: {
                             Image(systemName: viewModel.isTaskComplete ? "checkmark.circle.fill" : "circle")
                                 .resizable()
                                 .frame(width: Spacing.large, height: Spacing.large)
                                 .foregroundColor(viewModel.isTaskComplete ? Color.cPink : Color.cPink)
-                        }
+                        })
 
                         Text("Mark As Complete?")
                             .foregroundColor(Color("DarkPurple"))
@@ -79,20 +77,19 @@ struct AddTaskView: View {
                     // Save Changes Button
                     Button(action: {
                         viewModel.addToTaskListArray()
-
-                    }) {
+                    }, label: {
                         Text("Save Changes")
                             .font(Font.custom("NotoSansOriya", size: Spacing.medium))
                             .foregroundColor(Color("DarkestPurple"))
                             .padding(12.0)
                             .background(Color.cPink)
                             .cornerRadius(Spacing.medium)
-                    }
+                    })
 
                     // Delete Button
                     Button(action: {
                         viewModel.emptyTaskListArray()
-                    }) {
+                    }, label: {
                         HStack(alignment: .center) {
                             Image(systemName: "delete.left")
                                 .font(.system(size: Spacing.large, weight: .bold))
@@ -105,7 +102,7 @@ struct AddTaskView: View {
                         .padding(11.0)
                         .background(Color("DarkestPurple"))
                         .cornerRadius(Spacing.medium)
-                    }
+                    })
                     Spacer()
                 }
                 .padding(.horizontal, Spacing.spacious)

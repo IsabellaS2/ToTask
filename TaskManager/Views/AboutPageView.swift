@@ -11,7 +11,6 @@ struct AboutPageView: View {
     @ObservedObject var viewModel: TaskViewModel
 
     var body: some View {
-
         VStack {
             HStack {
                 Image("LogoImage")
@@ -33,7 +32,8 @@ struct AboutPageView: View {
                     .modifier(TextStyles.bulletPointStyle())
                     .multilineTextAlignment(.center)
 
-                Text("\u{2022} **Organised Categories**: Categorise tasks for effortless organisation and quick access.")
+                Text("\u{2022} **Organised Categories**: Categorise tasks for effortless " +
+                     "organisation and quick access.")
                     .modifier(TextStyles.bulletPointStyle())
                     .multilineTextAlignment(.center)
 
@@ -47,18 +47,14 @@ struct AboutPageView: View {
 
             Text("Start Today and Add A Task!")
                 .multilineTextAlignment(.center)
-
                 .modifier(TextStyles.descriptionStyle())
 
             Spacer()
 
             HStack {
-
                 // View All Tasks Button
-
                 Button {
                     viewModel.navigateAddTask()
-
                 } label: {
                     Text("View All Tasks")
                         .font(Font.custom("NotoSansOriya", size: Spacing.medium))
@@ -73,7 +69,6 @@ struct AboutPageView: View {
                 // Add Task Button
                 Button {
                     viewModel.navigateAddTask()
-
                 } label: {
                     Image(systemName: "plus.circle")
                         .font(.system(size: Spacing.large, weight: .bold))
@@ -84,15 +79,8 @@ struct AboutPageView: View {
                         .baselineOffset(-5)
                 }
                 .padding(12.0)
-                .background(Color.cPink)
-                .cornerRadius(Spacing.medium)
-
             }
-
         }
-        .padding(Spacing.spacious)
-        .background(Color("Rose"))
-
     }
 }
 
