@@ -6,8 +6,8 @@
 import SwiftUI
 
 struct AddTaskView: View {
-    @ObservedObject var viewModel = TaskViewModel()
-    
+    @ObservedObject var viewModel: TaskViewModel
+
     var body: some View {
         
         NavigationView {
@@ -120,6 +120,6 @@ struct AddTaskView: View {
 }
 
 
-#Preview {
-    AddTaskView()
-}
+//#Preview {
+//    AddTaskView()
+//}

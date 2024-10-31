@@ -8,8 +8,6 @@
 import SwiftUI
 
 class TaskViewModel: ObservableObject {
-    
-    
     @Published var taskList: [Task] = []
     
     @Published var selectedDate: Date = Date()
@@ -20,10 +18,14 @@ class TaskViewModel: ObservableObject {
     @Published var taskTitle: String = ""
     @Published var taskDescription: String = ""
     
+    var router: Router
+    
+    init(router: Router) {
+        self.router = router
+    }
     
     var dropdownOptions = Category.allCases.map { $0.rawValue }
     
-        
     var task1 = Task(
         title: "Science homework",
         description: "Biology presentation on anatomy",
@@ -33,7 +35,6 @@ class TaskViewModel: ObservableObject {
         isComplete: false
     )
 
-    
     func emptyTaskListArray() {
         taskList.removeAll()
         print(taskList)
@@ -54,13 +55,13 @@ class TaskViewModel: ObservableObject {
     
     func handleButtonToggle() {
         isTaskComplete.toggle()
-        
+    }
+    
+    func navigateToViewAllTasks() {
+        router.navigate(to: .aboutPage)
+    }
+    
+    func navigateAddTask() {
+        router.navigate(to: .addTask)
     }
 }
-
-
-//@Published var message: String = ""
-
-//check if tasks array is empty
-//if it is then
-//message =

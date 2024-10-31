@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AboutPageView: View {
+    @ObservedObject var viewModel: TaskViewModel
+
     var body: some View {
          
             VStack {
@@ -60,8 +62,8 @@ struct AboutPageView: View {
                     
                     // View All Tasks Button
                     
-                    NavigationLink {
-                        AddTaskView()
+                    Button {
+                        viewModel.navigateAddTask()
                         
                     } label: {
                         Text("View All Tasks")
@@ -77,9 +79,9 @@ struct AboutPageView: View {
                     
                     
                     //Add Task Button
-                    NavigationLink {
-                        AddTaskView()
-                        
+                    Button {
+                        viewModel.navigateAddTask()
+
                     } label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: Spacing.large, weight: .bold))
@@ -106,6 +108,6 @@ struct AboutPageView: View {
     }
 }
 
-#Preview {
-    AboutPageView()
-}
+//#Preview {
+//    AboutPageView()
+//}
