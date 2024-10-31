@@ -7,26 +7,26 @@
 
 import Foundation
 
-//struct TaskModel  {
+// struct TaskModel  {
 //    var id: UUID = UUID()
 //    var title: String
 //    var description: String?
-//    
+//
 //    var startDate: Date
 //    var dueDate: Date
-//    
+//
 //    var category: Category
 //    var isCompleted: Bool
-//    
+//
 
-//}
+// }
 
 enum Category: String, CaseIterable {
-        case school = "School"
-        case work = "Work"
-        case personal = "Personal"
-        case fitness = "Fitness"
-    }
+    case school = "School"
+    case work = "Work"
+    case personal = "Personal"
+    case fitness = "Fitness"
+}
 
 struct Task {
     let title: String
