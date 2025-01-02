@@ -18,6 +18,7 @@
 		EED772152B7BC0C6007BDA4A /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED772142B7BC0C6007BDA4A /* AddTaskView.swift */; };
 		EED772172B7BC0C8007BDA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED772162B7BC0C8007BDA4A /* Assets.xcassets */; };
 		EED7721A2B7BC0C8007BDA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */; };
+		EEFAD1912CD3A7F900018043 /* AllTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAD1902CD3A7F900018043 /* AllTasksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EED772142B7BC0C6007BDA4A /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		EED772162B7BC0C8007BDA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED772192B7BC0C8007BDA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EEFAD1902CD3A7F900018043 /* AllTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 				EE59B6B32C342680003D59DF /* AboutPageView.swift */,
 				EED772142B7BC0C6007BDA4A /* AddTaskView.swift */,
 				EEA7106D2C908CA000785086 /* HomeView.swift */,
+				EEFAD1902CD3A7F900018043 /* AllTasksView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				EEA7106E2C908CA000785086 /* HomeView.swift in Sources */,
 				EE59B6B42C342680003D59DF /* AboutPageView.swift in Sources */,
 				EE3AE1712CC69970001A80C1 /* Router.swift in Sources */,
+				EEFAD1912CD3A7F900018043 /* AllTasksView.swift in Sources */,
 				EE00D2BC2C6F8D65004FF048 /* TaskViewModel.swift in Sources */,
 				EE019E182C9460C600A8B764 /* TaskModel.swift in Sources */,
 				EED772152B7BC0C6007BDA4A /* AddTaskView.swift in Sources */,

@@ -110,7 +110,7 @@ struct HomeView: View {
                 HStack {
                     // View All Tasks Button
                     Button("View All Tasks") {
-                        viewModel.navigateToViewAllTasks()
+                        router.navigate(to: .allTasks)
                     }
                     .font(Font.custom("NotoSansOriya", size: Spacing.medium))
                     .foregroundColor(Color.cPink)
@@ -138,10 +138,10 @@ struct HomeView: View {
                 }
                 Spacer()
             }
+            Spacer()
         }
         .padding(15)
         .background(Color("Rose"))
-        Spacer()
     }
 }
 

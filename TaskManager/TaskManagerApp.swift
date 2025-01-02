@@ -20,6 +20,9 @@ struct TaskManagerApp: App {
                             AddTaskView(viewModel: TaskViewModel(router: router))
                         case .aboutPage:
                             AboutPageView(viewModel: TaskViewModel(router: router))
+
+                        case .allTasks:
+                            AllTasksView(viewModel: TaskViewModel(router: router))
                         }
                     }
             }

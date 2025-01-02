@@ -106,6 +106,7 @@ struct AddTaskView: View {
                     Spacer()
                 }
                 .padding(.horizontal, Spacing.spacious)
+                Spacer()
             }
             .background(Color("Rose"))
         }

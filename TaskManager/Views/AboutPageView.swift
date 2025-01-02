@@ -32,8 +32,10 @@ struct AboutPageView: View {
                     .modifier(TextStyles.bulletPointStyle())
                     .multilineTextAlignment(.center)
 
-                Text("\u{2022} **Organised Categories**: Categorise tasks for effortless " +
-                     "organisation and quick access.")
+                Text("""
+                \u{2022} **Organised Categories**: Categorise tasks \
+                for effortless organisation and quick access.
+                """)
                     .modifier(TextStyles.bulletPointStyle())
                     .multilineTextAlignment(.center)
 
@@ -79,8 +81,16 @@ struct AboutPageView: View {
                         .baselineOffset(-5)
                 }
                 .padding(12.0)
+                .background(Color.cPink)
+                .cornerRadius(Spacing.medium)
             }
+            .padding(.horizontal, 20.0)
+            .padding(.bottom, 20.0)
+
         }
+        .padding(10.0)
+        .background(Color("Rose"))
+
     }
 }
 

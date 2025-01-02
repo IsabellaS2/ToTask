@@ -57,7 +57,12 @@ class TaskViewModel: ObservableObject {
         isTaskComplete.toggle()
     }
 
+    // Routing
     func navigateToViewAllTasks() {
+        router.navigate(to: .allTasks)
+    }
+
+    func navigateToAboutPage() {
         router.navigate(to: .aboutPage)
     }
 
