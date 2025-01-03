@@ -12,13 +12,7 @@ struct AboutPageView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Image("LogoImage")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 100)
-            }
-            .padding(.top)
+            LogoImage()
 
             Text("This is ToTask!")
                 .modifier(TextStyles.descriptionStyle())
@@ -69,23 +63,10 @@ struct AboutPageView: View {
                 Spacer()
 
                 // Add Task Button
-                Button {
-                    viewModel.navigateAddTask()
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .font(.system(size: Spacing.large, weight: .bold))
-                        .foregroundColor(Color("DarkestPurple"))
-                    Text("Add Task")
-                        .font(Font.custom("NotoSansOriya", size: Spacing.medium))
-                        .foregroundColor(Color("DarkestPurple"))
-                        .baselineOffset(-5)
-                }
-                .padding(12.0)
-                .background(Color.cPink)
-                .cornerRadius(Spacing.medium)
+                AddTaskButton(action: viewModel.navigateAddTask, title: "Add Task")
             }
-            .padding(.horizontal, 20.0)
-            .padding(.bottom, 20.0)
+            .padding(.horizontal, Spacing.medium)
+            .padding(.bottom, Spacing.medium)
 
         }
         .padding(10.0)
@@ -93,7 +74,3 @@ struct AboutPageView: View {
 
     }
 }
-
-// #Preview {
-//    AboutPageView()
-// }

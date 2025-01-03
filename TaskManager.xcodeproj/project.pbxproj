@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE00D2BC2C6F8D65004FF048 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00D2BB2C6F8D65004FF048 /* TaskViewModel.swift */; };
 		EE019E182C9460C600A8B764 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE019E172C9460C600A8B764 /* TaskModel.swift */; };
+		EE0AD8132D282DEF00AEF204 /* TemplateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0AD8122D282DEF00AEF204 /* TemplateViews.swift */; };
 		EE3AE1712CC69970001A80C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AE1702CC69970001A80C1 /* Router.swift */; };
 		EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */; };
 		EE59B6B42C342680003D59DF /* AboutPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59B6B32C342680003D59DF /* AboutPageView.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		EE00D2BB2C6F8D65004FF048 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		EE019E172C9460C600A8B764 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		EE0AD8122D282DEF00AEF204 /* TemplateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViews.swift; sourceTree = "<group>"; };
 		EE3AE1702CC69970001A80C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EE4BB9C62B88F49F00FFF4F2 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		EE59B6B32C342680003D59DF /* AboutPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				EE59B6B32C342680003D59DF /* AboutPageView.swift */,
 				EED772142B7BC0C6007BDA4A /* AddTaskView.swift */,
 				EEA7106D2C908CA000785086 /* HomeView.swift */,
+				EE0AD8122D282DEF00AEF204 /* TemplateViews.swift */,
 				EEFAD1902CD3A7F900018043 /* AllTasksView.swift */,
 			);
 			path = Views;
@@ -195,6 +198,7 @@
 				EE4BB9C72B88F49F00FFF4F2 /* TextStyles.swift in Sources */,
 				EED772132B7BC0C6007BDA4A /* TaskManagerApp.swift in Sources */,
 				EE996DF12B88E1EE0036470C /* Spacing.swift in Sources */,
+				EE0AD8132D282DEF00AEF204 /* TemplateViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

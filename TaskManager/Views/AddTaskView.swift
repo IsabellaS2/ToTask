@@ -6,23 +6,15 @@
 import SwiftUI
 
 struct AddTaskView: View {
+    @EnvironmentObject var router: Router
     @ObservedObject var viewModel: TaskViewModel
+
+    // might need to pass task list from this view back to home
 
     var body: some View {
         NavigationView {
             VStack {
-                // Image and back arrow
-                HStack {
-                    Image(systemName: "arrow.left")
-                        .font(.system(size: Spacing.big, weight: .bold))
-                        .foregroundColor(Color("Purple2"))
-
-                    Image("LogoImage")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 100)
-                }
-                .padding(.top)
+                LogoImage()
 
                 // Entered text section
                 VStack(alignment: .leading) {
@@ -86,6 +78,17 @@ struct AddTaskView: View {
                             .cornerRadius(Spacing.medium)
                     })
 
+                    Button {
+                        router.navigate(to: .home)
+                    } label: {
+                        Text("Back to Home")
+                            .font(Font.custom("NotoSansOriya", size: Spacing.medium))
+                            .foregroundColor(Color.cPink)
+                            .padding(Spacing.standard)
+                            .background(Color("DarkestPurple"))
+                            .cornerRadius(Spacing.medium)
+                    }
+
                     // Delete Button
                     Button(action: {
                         viewModel.emptyTaskListArray()
@@ -112,7 +115,3 @@ struct AddTaskView: View {
         }
     }
 }
-
-// #Preview {
-//    AddTaskView()
-// }
