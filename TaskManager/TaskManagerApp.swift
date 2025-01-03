@@ -10,11 +10,12 @@ import SwiftUI
 @main
 struct TaskManagerApp: App {
     @ObservedObject var router = Router()
+    
     var body: some Scene {
         let viewModel = TaskViewModel(router: router)
         WindowGroup {
             NavigationStack(path: $router.navPath) {
-                HomeView(viewModel: TaskViewModel(router: router))
+                HomeView(viewModel: viewModel)
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
                         case .addTask:
@@ -25,6 +26,9 @@ struct TaskManagerApp: App {
 
                         case .allTasks:
                             AllTasksView(viewModel: viewModel)
+                            
+                        case .home:
+                            HomeView(viewModel: viewModel)
                         }
                     }
             }

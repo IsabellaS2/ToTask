@@ -12,7 +12,6 @@ struct AboutPageView: View {
 
     var body: some View {
         VStack {
-
             LogoImage()
 
             Text("This is ToTask!")
@@ -75,7 +74,3 @@ struct AboutPageView: View {
 
     }
 }
-
-// #Preview {
-//    AboutPageView()
-// }

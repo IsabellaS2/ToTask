@@ -10,6 +10,7 @@ import SwiftUI
 final class Router: ObservableObject {
 
     public enum Destination: Codable, Hashable {
+        case home
         case addTask
         case aboutPage
         case allTasks

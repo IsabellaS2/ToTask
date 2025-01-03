@@ -37,6 +37,22 @@ struct HomeView: View {
                 TaskCardView(viewModel: viewModel, title: viewModel.task1.title,
                              category: viewModel.task1.category, description: viewModel.task1.description,
                              dueDate: viewModel.task1.dueDate)
+                
+                
+                if viewModel.taskList.isEmpty {
+                    Text("No tasks to display")
+                        .font(.custom("Gill Sans", size: Spacing.medium))
+                        .foregroundColor(Color("DarkPurple"))
+                } else {
+                    ForEach(viewModel.taskList.indices, id: \.self) { index in
+                        TaskCardView(viewModel: viewModel, title: viewModel.taskList[index].title,
+                                     category: viewModel.taskList[index].category,
+                                     description: viewModel.taskList[index].description,
+                                     dueDate: viewModel.taskList[index].dueDate)
+                    }
+                }
+
+                                
                 Spacer()
 
                 // Buttons
@@ -54,12 +70,12 @@ struct HomeView: View {
                     Spacer()
 
                     // Add Task Button
-                    AddTaskButton(action: viewModel.navigateAddTask, title: "test Add Task")
+                    AddTaskButton(action: viewModel.navigateAddTask, title: "Add Task")
                     
-                    //about page button
-                    Button("About Page") {
-                        router.navigate(to: .aboutPage)
-                    }
+                }
+                //about page button
+                Button("About Page") {
+                    router.navigate(to: .aboutPage)
                 }
                 Spacer()
             }
@@ -67,9 +83,9 @@ struct HomeView: View {
         }
         .padding(Spacing.standard)
         .background(Color("Rose"))
+        .onAppear {
+            print("HomeView appeared, task list count: \(viewModel.taskList.count)")
+        }
     }
+    
 }
-
-// #Preview {
-//    HomeView()
-// }

@@ -79,7 +79,7 @@ struct TaskCardView: View {
                 HStack {
                     // complete button
                     Button {
-                        viewModel.navigateAddTask()
+                        viewModel.emptyTaskListArray()
                     } label: {
                         Image(systemName: "checkmark.circle")
                             .font(.system(size: Spacing.medium, weight: .bold))
