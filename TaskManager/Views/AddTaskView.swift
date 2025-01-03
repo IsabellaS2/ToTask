@@ -8,9 +8,9 @@ import SwiftUI
 struct AddTaskView: View {
     @EnvironmentObject var router: Router
     @ObservedObject var viewModel: TaskViewModel
-    
-    //might need to pass task list from this view back to home
-    
+
+    // might need to pass task list from this view back to home
+
     var body: some View {
         NavigationView {
             VStack {
@@ -77,7 +77,7 @@ struct AddTaskView: View {
                             .background(Color.cPink)
                             .cornerRadius(Spacing.medium)
                     })
-                    
+
                     Button {
                         router.navigate(to: .home)
                     } label: {

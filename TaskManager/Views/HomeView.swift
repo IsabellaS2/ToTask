@@ -37,8 +37,7 @@ struct HomeView: View {
                 TaskCardView(viewModel: viewModel, title: viewModel.task1.title,
                              category: viewModel.task1.category, description: viewModel.task1.description,
                              dueDate: viewModel.task1.dueDate)
-                
-                
+
                 if viewModel.taskList.isEmpty {
                     Text("No tasks to display")
                         .font(.custom("Gill Sans", size: Spacing.medium))
@@ -52,7 +51,6 @@ struct HomeView: View {
                     }
                 }
 
-                                
                 Spacer()
 
                 // Buttons
@@ -71,9 +69,9 @@ struct HomeView: View {
 
                     // Add Task Button
                     AddTaskButton(action: viewModel.navigateAddTask, title: "Add Task")
-                    
+
                 }
-                //about page button
+                // about page button
                 Button("About Page") {
                     router.navigate(to: .aboutPage)
                 }
@@ -87,5 +85,5 @@ struct HomeView: View {
             print("HomeView appeared, task list count: \(viewModel.taskList.count)")
         }
     }
-    
+
 }

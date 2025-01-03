@@ -19,7 +19,7 @@ struct LogoImage: View {
 struct AddTaskButton: View {
     let action: () -> Void
     let title: String
-    
+
     var body: some View {
         Button {
             action()
@@ -37,7 +37,6 @@ struct AddTaskButton: View {
         .cornerRadius(Spacing.medium)
     }
 }
-
 
 struct TaskCardView: View {
     @ObservedObject var viewModel: TaskViewModel
@@ -117,5 +116,3 @@ struct TaskCardView: View {
         )
     }
 }
-
-
